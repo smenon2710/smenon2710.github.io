@@ -12,6 +12,7 @@
       --orange: #ff7a00;
       --dark: #1a1a1a;
       --light: #ffffff;
+      --muted: #f9f9f9;
       --tag-bg: #fff3e6;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,72 +46,39 @@
     }
     nav a:hover { color: var(--orange); }
     section {
-      max-width: 1040px;
-      margin: 7rem auto 2rem;
+      max-width: 1080px;
+      margin: 7rem auto 3rem;
       padding: 2.5rem;
-      background: var(--light);
+      background: var(--muted);
       border-radius: 16px;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
-    h1 {
-      font-size: 2.6rem;
+    h1, h2, h3 {
       font-weight: 700;
-      color: var(--dark);
       margin-bottom: 1rem;
     }
-    h2 {
-      font-size: 2rem;
-      color: var(--orange);
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin-top: 1rem;
-    }
-    ul {
-      list-style: disc;
-      padding-left: 1.5rem;
-      margin-top: 1rem;
-    }
-    p {
+    h1 { font-size: 2.5rem; color: var(--dark); }
+    h2 { font-size: 2rem; color: var(--orange); }
+    h3 { font-size: 1.4rem; color: var(--dark); margin-top: 1.5rem; }
+    p, li {
       font-size: 1.1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
-    .profile {
-      width: 200px;
-      border-radius: 100px;
-      display: block;
-      margin: 0 auto 1.5rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    }
+    ul { padding-left: 1.5rem; margin-top: 1rem; }
     .cta {
       display: inline-block;
       background: linear-gradient(to right, #FFA500, #FF7F50);
       color: white;
-      padding: 1rem 2.2rem;
+      padding: 0.9rem 2rem;
       font-size: 1rem;
       border-radius: 10px;
       font-weight: bold;
       text-decoration: none;
       margin-top: 1.5rem;
-      transition: 0.3s ease;
+      transition: background 0.3s ease;
     }
     .cta:hover {
       background: linear-gradient(to right, #ff7a00, #ff4e00);
-    }
-    .tag {
-      display: inline-block;
-      background: var(--tag-bg);
-      color: var(--orange);
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin: 0.25rem;
-    }
-    .project-list li {
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
     }
     footer {
       text-align: center;
@@ -118,8 +86,20 @@
       font-size: 0.95rem;
       color: #777;
     }
-    .spacer { margin-top: 6rem; }
-    .center { text-align: center; }
+    .section-title {
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .contact-link a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .contact-link a:hover {
+      color: var(--orange);
+    }
   </style>
 </head>
 <body>
@@ -128,86 +108,112 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<div class="spacer"></div>
+<div class="spacer" style="margin-top: 6rem;"></div>
 
-<section id="home" data-aos="fade-up" class="center">
-  <img src="profile.jpg" alt="Sujithkumar Menon" class="profile" />
-  <h1>BI & GenAI Leader | Tableau | SQL | Power BI</h1>
-  <p>I’m Sujithkumar Menon — blending 13+ years of data strategy with Generative AI to drive business outcomes. Let’s build the future of data-driven decisions together.</p>
-  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Let’s Connect</a>
+<section id="home" data-aos="fade-up">
+  <div class="section-title">🏠 Home</div>
+  <h1>🚀 BI & GenAI Leader | 13+ Years Experience | Tableau | Power BI | SQL | LLM Applications</h1>
+  <p>I’m Sujithkumar Menon — an analytics innovator building the next generation of data intelligence through BI and Generative AI. I transform complexity into clarity through smart, scalable, AI-powered insights.</p>
+  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Connect With Me</a>
 </section>
 
 <section id="about" data-aos="fade-up">
-  <h2>About Me</h2>
-  <p>I’m a data and analytics leader with 13+ years of experience across Fortune 500 firms, driving innovation through BI and GenAI. I specialize in building AI-augmented tools that make data more accessible and actionable — from SQL assistants to job matchers and offline RAG bots.</p>
-  <p>With a strong foundation in Tableau, Power BI, SQL, and experience in LangChain, Streamlit, OpenAI, and Python — I’ve led agile teams at Amazon, Discover, and Global Payments to deliver business-impacting solutions.</p>
-  <p><strong>Open to full-time roles in BI + GenAI, Product Analytics, and Data Engineering.</strong></p>
-</section>
-
-<section id="portfolio" data-aos="fade-up">
-  <h2>Portfolio</h2>
-  <ul class="project-list">
-    <li><strong>🔍 InsightMate – GPT-Powered SQL Assistant:</strong> Converts text to SQL + visualizes in Streamlit.</li>
-    <li><strong>👔 Resume-to-Job Matcher:</strong> Ranks job matches using NLP + SerpAPI scraping.</li>
-    <li><strong>🤖 ImmigraBot:</strong> Offline RAG chatbot with FAISS + HuggingFace for U.S. immigration info.</li>
-    <li><strong>📈 AutoBI+:</strong> GenAI toolkit for no-code BI forecasting and clustering.</li>
-    <li><strong>📊 Executive Dashboards:</strong> BI dashboards used by Discover, Amazon Ring, Global Payments.</li>
-  </ul>
+  <div class="section-title">👤 About Me</div>
+  <p>I’m a <strong>BI & Data Leader</strong> with over 13 years of experience delivering analytics, dashboards, and automation for Fortune 500 companies like Amazon, Discover, and Global Payments.</p>
+  <p>Lately, I’ve focused on merging <strong>Business Intelligence with Generative AI</strong> — developing powerful tools like <strong>SQL Assistants</strong>, <strong>Job Matchers</strong>, and <strong>RAG-based Chatbots</strong> to bring AI into practical business workflows.</p>
+  <p>What drives me? Simplifying data. Empowering users. Building solutions that deliver real outcomes. I’m currently seeking full-time roles in <strong>BI + GenAI</strong>, <strong>Product Analytics</strong>, or <strong>AI-Augmented Data Strategy</strong>.</p>
 </section>
 
 <section id="experience" data-aos="fade-up">
-  <h2>Experience</h2>
+  <div class="section-title">💼 Experience</div>
+  <h3>Self-Employed</h3>
+  <p><strong>Lead Data Analyst | GenAI Engineer | BI Consultant</strong><br><em>Jul 2024 – Present · NYC Metro Area</em></p>
   <ul>
-    <li><strong>Self-Employed (2024–Present):</strong> Built InsightMate, AutoBI+, Resume Matcher. Delivered POCs & consulting wins.</li>
-    <li><strong>Discover Financial (2023–2024):</strong> BI lead – delivered enterprise Power BI platforms and team leadership.</li>
-    <li><strong>Global Payments (2022):</strong> BI lead & Scrum Master – streamlined reporting and built exec dashboards.</li>
-    <li><strong>Amazon Ring (2019–2022):</strong> Unified dashboards and built operations analytics platform in Tableau.</li>
+    <li>Built <strong>InsightMate</strong>, AutoBI+, ImmigraBot, and H1B Matcher</li>
+    <li>Delivered client BI dashboards, improving speed/usability by 30–40%</li>
+  </ul>
+  <h3>Discover Financial Services (via BitWise Inc)</h3>
+  <p><strong>Lead BI Engineer | Agile Project Lead</strong><br><em>Jan 2023 – Jun 2024 · Chicago, IL</em></p>
+  <ul>
+    <li>Reduced manual reporting by 60% with Python/SQL</li>
+    <li>Led Power BI POC that secured a $50K contract</li>
+  </ul>
+  <h3>Global Payments Inc. (via BitWise Inc)</h3>
+  <p><strong>Lead Data Analyst | Scrum Master</strong><br><em>Mar 2022 – Dec 2022 · Atlanta, GA</em></p>
+  <ul>
+    <li>Reduced backlog by 40%, improved delivery via agile workflows</li>
+  </ul>
+  <h3>Amazon – Ring</h3>
+  <p><strong>BI Engineer | Project Lead</strong><br><em>Jun 2019 – Feb 2022 · Pune, India</em></p>
+  <ul>
+    <li>Migrated 100+ Looker dashboards to Tableau</li>
+    <li>Improved dashboard engagement and refresh speed</li>
   </ul>
 </section>
 
 <section id="skills" data-aos="fade-up">
-  <h2>Skills & Tools</h2>
+  <div class="section-title">🛠️ Skills & Tools</div>
+  <h3>BI & Analytics Tools</h3>
+  <ul><li>Tableau (Certified), Power BI, SQL (Redshift, Snowflake), Looker</li></ul>
+  <h3>GenAI & NLP</h3>
+  <ul><li>LangChain, Streamlit, OpenAI, HuggingFace, FAISS</li></ul>
+  <h3>Programming & Infra</h3>
+  <ul><li>Python, Git, AWS, GCP, CI/CD, APIs</li></ul>
+  <h3>Agile & Product</h3>
+  <ul><li>Scrum, Jira, POCs, Strategy, Client Delivery</li></ul>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <div class="section-title">📂 Projects</div>
   <ul>
-    <li><strong>BI Tools:</strong> Tableau, Power BI, Looker</li>
-    <li><strong>GenAI:</strong> LangChain, Streamlit, HuggingFace, OpenAI, FAISS</li>
-    <li><strong>Languages & Infra:</strong> Python, SQL, Git, AWS, GCP</li>
-    <li><strong>Certifications:</strong> Tableau Analyst, Product School PM, GitHub Data Science</li>
+    <li><strong>🧠 InsightMate:</strong> GPT-based SQL assistant in Streamlit</li>
+    <li><strong>💼 Smart Resume Matcher:</strong> NLP tool to match resumes to live jobs</li>
+    <li><strong>🗽 ImmigraBot:</strong> Offline chatbot using RAG + FAISS</li>
+    <li><strong>📊 AutoBI+:</strong> No-code LLM app for anomaly detection and clustering</li>
+    <li><strong>📈 Executive Dashboards:</strong> BI dashboards for senior leaders</li>
   </ul>
 </section>
 
 <section id="education" data-aos="fade-up">
-  <h2>Education</h2>
+  <div class="section-title">🎓 Education</div>
   <ul>
-    <li><strong>Applied Generative AI</strong> — Purdue University (In Progress – 2025)</li>
-    <li><strong>Product Management</strong> — Product School (2024)</li>
-    <li><strong>B.E. in Information Technology</strong> — PCCOE, University of Pune</li>
+    <li><strong>Purdue University:</strong> Applied Generative AI (2025)</li>
+    <li><strong>Product School:</strong> Product Management (2024)</li>
+    <li><strong>PCCOE:</strong> BE – Information Technology</li>
+  </ul>
+  <h3>Certifications</h3>
+  <ul>
+    <li>Tableau Data Analyst</li>
+    <li>Product Manager – Product School</li>
+    <li>GitHub for Data Scientists, Power BI Modeling</li>
+  </ul>
+  <h3>Awards</h3>
+  <ul>
+    <li>Excellence Award, Differentiator Award, V Awards</li>
   </ul>
 </section>
 
-<section id="contact" data-aos="fade-up" class="center">
-  <h2>Get In Touch</h2>
+<section id="contact" data-aos="fade-up">
+  <div class="section-title">🌐 Contact</div>
   <p>📍 New York City Metropolitan Area</p>
   <p>📧 <a href="mailto:sujithkumar.v.menon@gmail.com">sujithkumar.v.menon@gmail.com</a></p>
-  <p>🔗 <a href="https://www.linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a> &nbsp; | &nbsp; <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
-  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Say Hello</a>
+  <p>📞 +1 (609) 297-6459</p>
+  <p>🔗 <a href="https://linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a> | <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
 </section>
 
 <footer>
-  Designed & Built by Sujithkumar Menon ✨
+  &copy; 2025 Sujithkumar Menon — BI & GenAI Portfolio
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-</script>
-
+<script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
