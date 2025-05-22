@@ -8,16 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    :root {
+      --orange: #ff7a00;
+      --dark: #1a1a1a;
+      --light: #ffffff;
+      --tag-bg: #fff3e6;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.75;
     }
     header {
-      background: #fff;
+      background: var(--light);
       padding: 1rem 2rem;
       position: fixed;
       width: 100%;
@@ -29,55 +35,91 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
     nav a {
-      color: #1a1a1a;
+      color: var(--dark);
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
     }
-    nav a:hover { color: #ff7a00; }
+    nav a:hover { color: var(--orange); }
     section {
-      max-width: 900px;
-      margin: 6rem auto 2rem;
-      padding: 2rem;
-      background: #fefefe;
+      max-width: 1040px;
+      margin: 7rem auto 2rem;
+      padding: 2.5rem;
+      background: var(--light);
       border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
     }
-    h1, h2 { margin-bottom: 1rem; }
-    h1 { font-size: 2.2rem; color: #1a1a1a; }
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
     h2 {
-      font-size: 1.5rem;
-      color: #ff7a00;
-      border-bottom: 2px solid #ffe5c2;
-      padding-bottom: 0.5rem;
+      font-size: 2rem;
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-weight: 700;
     }
-    ul { list-style: disc; padding-left: 1.2rem; }
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
     .profile {
-      width: 160px;
+      width: 200px;
       border-radius: 100px;
       display: block;
       margin: 0 auto 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
     .cta {
       display: inline-block;
       background: linear-gradient(to right, #FFA500, #FF7F50);
       color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 2.2rem;
+      font-size: 1rem;
+      border-radius: 10px;
       font-weight: bold;
       text-decoration: none;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
+      transition: 0.3s ease;
+    }
+    .cta:hover {
+      background: linear-gradient(to right, #ff7a00, #ff4e00);
+    }
+    .tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--orange);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin: 0.25rem;
+    }
+    .project-list li {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
     }
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      font-size: 0.95rem;
+      color: #777;
     }
     .spacer { margin-top: 6rem; }
+    .center { text-align: center; }
   </style>
 </head>
 <body>
@@ -96,70 +138,70 @@
 
 <div class="spacer"></div>
 
-<section id="home" data-aos="fade-up">
+<section id="home" data-aos="fade-up" class="center">
   <img src="profile.jpg" alt="Sujithkumar Menon" class="profile" />
-  <h1>BI & GenAI Leader | Tableau | SQL | Power BI | AI-Driven Innovation in Analytics</h1>
-  <p>I’m Sujithkumar Menon - blending 13+ years of data strategy with cutting-edge Generative AI to drive business impact. Let's build the future of data-driven decision-making together.</p>
+  <h1>BI & GenAI Leader | Tableau | SQL | Power BI</h1>
+  <p>I’m Sujithkumar Menon — blending 13+ years of data strategy with Generative AI to drive business outcomes. Let’s build the future of data-driven decisions together.</p>
   <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Let’s Connect</a>
 </section>
 
 <section id="about" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I’m a data and analytics leader with 13+ years of experience across Fortune 500 firms, driving innovation through business intelligence and Generative AI. I specialize in building AI-augmented tools that make data more accessible and actionable, from SQL assistants to job matchers and offline RAG bots.</p>
-  <p>With a strong foundation in Tableau, Power BI, and SQL, and expertise in LangChain, Streamlit, OpenAI, and Python, I’ve led agile teams at Amazon, Discover, and Global Payments, delivering solutions that boost performance, reduce manual effort, and enhance executive insights.</p>
-  <p>Currently open to full-time opportunities in BI + GenAI, Product Analytics, and Data Engineering.</p>
+  <p>I’m a data and analytics leader with 13+ years of experience across Fortune 500 firms, driving innovation through BI and GenAI. I specialize in building AI-augmented tools that make data more accessible and actionable — from SQL assistants to job matchers and offline RAG bots.</p>
+  <p>With a strong foundation in Tableau, Power BI, SQL, and experience in LangChain, Streamlit, OpenAI, and Python — I’ve led agile teams at Amazon, Discover, and Global Payments to deliver business-impacting solutions.</p>
+  <p><strong>Open to full-time roles in BI + GenAI, Product Analytics, and Data Engineering.</strong></p>
 </section>
 
 <section id="portfolio" data-aos="fade-up">
   <h2>Portfolio</h2>
-  <ul>
-    <li><strong>🔍 InsightMate – GPT-Powered SQL Assistant:</strong> Text-to-SQL with visualized outputs via Streamlit.</li>
-    <li><strong>👔 Resume-to-Job Matcher:</strong> Uses NLP + SerpAPI to rank job matches semantically.</li>
-    <li><strong>🤖 ImmigraBot:</strong> Offline chatbot using FAISS + HuggingFace to answer U.S. immigration queries.</li>
-    <li><strong>📈 AutoBI+:</strong> GenAI toolkit for BI forecasting, clustering, and anomaly detection.</li>
-    <li><strong>📊 Enterprise Dashboards:</strong> High-impact dashboards for Discover, Amazon, Global Payments.</li>
+  <ul class="project-list">
+    <li><strong>🔍 InsightMate – GPT-Powered SQL Assistant:</strong> Converts text to SQL + visualizes in Streamlit.</li>
+    <li><strong>👔 Resume-to-Job Matcher:</strong> Ranks job matches using NLP + SerpAPI scraping.</li>
+    <li><strong>🤖 ImmigraBot:</strong> Offline RAG chatbot with FAISS + HuggingFace for U.S. immigration info.</li>
+    <li><strong>📈 AutoBI+:</strong> GenAI toolkit for no-code BI forecasting and clustering.</li>
+    <li><strong>📊 Executive Dashboards:</strong> BI dashboards used by Discover, Amazon Ring, Global Payments.</li>
   </ul>
 </section>
 
 <section id="experience" data-aos="fade-up">
   <h2>Experience</h2>
   <ul>
-    <li><strong>Self-Employed (2024–Present):</strong> Built InsightMate, AutoBI+, Resume Matcher. Led dashboard delivery & POCs.</li>
-    <li><strong>Discover Financial (2023–2024):</strong> BI lead; built enterprise Power BI stack and agile delivery teams.</li>
-    <li><strong>Global Payments (2022):</strong> Scrum master; streamlined BI ops and exec dashboards.</li>
-    <li><strong>Amazon Ring (2019–2022):</strong> BI engineer; unified 100+ dashboards, enabled operational analytics.</li>
+    <li><strong>Self-Employed (2024–Present):</strong> Built InsightMate, AutoBI+, Resume Matcher. Delivered POCs & consulting wins.</li>
+    <li><strong>Discover Financial (2023–2024):</strong> BI lead – delivered enterprise Power BI platforms and team leadership.</li>
+    <li><strong>Global Payments (2022):</strong> BI lead & Scrum Master – streamlined reporting and built exec dashboards.</li>
+    <li><strong>Amazon Ring (2019–2022):</strong> Unified dashboards and built operations analytics platform in Tableau.</li>
   </ul>
 </section>
 
 <section id="skills" data-aos="fade-up">
   <h2>Skills & Tools</h2>
   <ul>
-    <li><strong>BI Platforms:</strong> Tableau, Power BI, Looker</li>
-    <li><strong>GenAI Stack:</strong> LangChain, Streamlit, HuggingFace, OpenAI, FAISS</li>
+    <li><strong>BI Tools:</strong> Tableau, Power BI, Looker</li>
+    <li><strong>GenAI:</strong> LangChain, Streamlit, HuggingFace, OpenAI, FAISS</li>
     <li><strong>Languages & Infra:</strong> Python, SQL, Git, AWS, GCP</li>
-    <li><strong>Certifications:</strong> Tableau Certified Data Analyst, Product School, GitHub for Data Scientists</li>
+    <li><strong>Certifications:</strong> Tableau Analyst, Product School PM, GitHub Data Science</li>
   </ul>
 </section>
 
 <section id="education" data-aos="fade-up">
   <h2>Education</h2>
   <ul>
-    <li><strong>Applied Generative AI</strong>, Purdue University (In Progress – 2025)</li>
-    <li><strong>Product Management</strong>, Product School (2024)</li>
-    <li><strong>B.E. Information Technology</strong>, Pimpri Chinchwad College of Engineering</li>
+    <li><strong>Applied Generative AI</strong> — Purdue University (In Progress – 2025)</li>
+    <li><strong>Product Management</strong> — Product School (2024)</li>
+    <li><strong>B.E. in Information Technology</strong> — PCCOE, University of Pune</li>
   </ul>
 </section>
 
-<section id="contact" data-aos="fade-up">
-  <h2>Contact</h2>
+<section id="contact" data-aos="fade-up" class="center">
+  <h2>Get In Touch</h2>
   <p>📍 New York City Metropolitan Area</p>
   <p>📧 <a href="mailto:sujithkumar.v.menon@gmail.com">sujithkumar.v.menon@gmail.com</a></p>
-  <p>🔗 <a href="https://www.linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a></p>
-  <p>💻 <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a> &nbsp; | &nbsp; <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
+  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Say Hello</a>
 </section>
 
 <footer>
-  &copy; 2025 Sujithkumar Menon — Designed with GenAI ✨
+  Designed & Built by Sujithkumar Menon ✨
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
