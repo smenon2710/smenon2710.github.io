@@ -4,79 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sujithkumar Menon | BI & GenAI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a192f;
-      color: #ffffff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f9fc;
+      color: #1e293b;
       line-height: 1.6;
     }
 
     header {
-      background-color: #112240;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+      background: #ffffff;
+      padding: 1.5rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
     }
 
     nav {
-      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     nav a {
-      color: #64ffda;
-      margin: 0 1rem;
+      color: #1e293b;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 5rem auto 2rem;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1, h2 {
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
     }
 
     h2 {
-      color: #64ffda;
-      border-bottom: 1px solid #233554;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e2e8f0;
       padding-bottom: 0.5rem;
     }
 
     ul {
       list-style-type: none;
-      padding: 0;
+      padding-left: 0;
     }
 
     ul li {
       margin: 1rem 0;
     }
 
-    a {
-      color: #64ffda;
-    }
-
-    .project-title {
-      font-weight: bold;
+    img.profile {
+      width: 160px;
+      border-radius: 100px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #8892b0;
+      color: #64748b;
+    }
+
+    .project-title {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .spacer {
+      margin-top: 5rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Sujithkumar Menon</h1>
-    <p>Business Intelligence & Generative AI Specialist | 13+ Years Experience</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -87,10 +122,18 @@
     </nav>
   </header>
 
+  <div class="spacer"></div>
+
   <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Sujithkumar Menon, a Business Intelligence and Generative AI specialist with 13+ years of experience turning raw data into actionable insights. I build smart dashboards, automate analytics with AI, and design data products that deliver business impact.</p>
-    <p>Whether it's Tableau dashboards, GenAI-powered assistants, or SQL optimization, I combine innovation and execution to enable smarter decisions.</p>
+    <img src="2.png" alt="Sujithkumar Menon" class="profile" />
+    <h1>Hi, I'm Sujithkumar Menon</h1>
+    <p>
+      A Business Intelligence and Generative AI specialist with 13+ years of experience turning raw data into actionable insights.
+      I build smart dashboards, automate analytics with AI, and design data products that deliver business impact.
+    </p>
+    <p>
+      Whether it's Tableau dashboards, GenAI-powered assistants, or SQL optimization, I combine innovation and execution to enable smarter decisions.
+    </p>
   </section>
 
   <section id="skills">
@@ -107,25 +150,26 @@
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><span class="project-title">🧠 InsightMate – GPT-4 Powered SQL Assistant</span><br>
-      Built a no-code SQL assistant that turns natural language into queries. Generates charts and summaries from Excel/CSV uploads.<br>
-      <em>Tech:</em> Streamlit, OpenAI, LangChain, SQLite<br>
-      <em>Impact:</em> Reduced reporting dependency by 50%, increased internal tool usage.</li>
-
-      <li><span class="project-title">📊 AutoBI+ – GenAI Business Intelligence Toolkit</span><br>
-      An all-in-one BI solution with LLM-powered forecasting, clustering, and anomaly detection.<br>
-      <em>Tech:</em> Streamlit, Python, OpenAI<br>
-      <em>Impact:</em> Cut dashboard creation time by 40%, improved trend identification.</li>
-
-      <li><span class="project-title">🛂 Immigration RAG Bot</span><br>
-      Offline RAG chatbot for U.S. immigration queries using localized documents.<br>
-      <em>Tech:</em> LangChain, HuggingFace, FAISS, Streamlit<br>
-      <em>Impact:</em> Increased user retention by 35% for an internal HR tool prototype.</li>
-
-      <li><span class="project-title">📈 Financial Analyst AI</span><br>
-      AI assistant for real-time stock insights and sentiment analysis.<br>
-      <em>Tech:</em> GPT-3.5, Streamlit, News API, Yahoo Finance API<br>
-      <em>Impact:</em> Used by finance team to triage daily calls; reduced decision lag.</li>
+      <li>
+        <span class="project-title">🧠 InsightMate – GPT-4 Powered SQL Assistant</span><br>
+        <em>Tech:</em> Streamlit, OpenAI, LangChain, SQLite<br>
+        Reduced reporting dependency by 50%, increased internal tool usage.
+      </li>
+      <li>
+        <span class="project-title">📊 AutoBI+ – GenAI BI Toolkit</span><br>
+        <em>Tech:</em> Streamlit, Python, OpenAI<br>
+        Cut dashboard creation time by 40%, improved trend identification.
+      </li>
+      <li>
+        <span class="project-title">🛂 Immigration RAG Bot</span><br>
+        <em>Tech:</em> LangChain, HuggingFace, FAISS, Streamlit<br>
+        Offline chatbot for U.S. immigration queries. Retention ↑ by 35%.
+      </li>
+      <li>
+        <span class="project-title">📈 Financial Analyst AI</span><br>
+        <em>Tech:</em> GPT-3.5, Streamlit, News API<br>
+        Provided real-time market insights. Used for daily investment calls.
+      </li>
     </ul>
   </section>
 
@@ -136,7 +180,7 @@
       <li>⏱ Reduced dashboard refresh time by 40% at Amazon Ring</li>
       <li>⚙️ Automated workflows cutting 60% of manual effort across teams</li>
       <li>📊 Designed executive Tableau dashboards used by C-suite</li>
-      <li>🤝 Mentored cross-functional teams and led agile projects across major companies</li>
+      <li>🤝 Mentored cross-functional teams and led agile projects</li>
     </ul>
   </section>
 
@@ -145,7 +189,7 @@
     <ul>
       <li><strong>Purdue University</strong> (2025)<br>Applied Generative AI</li>
       <li><strong>Product School</strong> (2024)<br>Product Management</li>
-      <li><strong>B.E., Information Technology</strong><br>Pimpri Chinchwad College of Engineering</li>
+      <li><strong>Bachelor of Engineering in Information Technology</strong><br>Pimpri Chinchwad College of Engineering</li>
     </ul>
   </section>
 
@@ -160,7 +204,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Sujithkumar Menon | BI & GenAI Portfolio
+    &copy; 2025 Sujithkumar Menon · Designed with 💡 and GenAI
   </footer>
 
 </body>
