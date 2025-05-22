@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sujithkumar Menon | BI & GenAI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,20 +13,20 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f9fc;
-      color: #1e293b;
+      font-family: 'Montserrat', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
       line-height: 1.6;
     }
 
     header {
       background: #ffffff;
-      padding: 1.5rem 2rem;
+      padding: 1rem 2rem;
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
       z-index: 1000;
     }
 
@@ -37,22 +37,27 @@
     }
 
     nav a {
-      color: #1e293b;
+      color: #1a1a1a;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff7a00;
     }
 
     section {
       max-width: 900px;
-      margin: 5rem auto 2rem;
+      margin: 6rem auto 2rem;
       padding: 2rem;
-      background: #ffffff;
+      background: #fefefe;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     h1, h2 {
-      color: #0f172a;
+      color: #1a1a1a;
       margin-bottom: 1rem;
     }
 
@@ -62,7 +67,8 @@
 
     h2 {
       font-size: 1.5rem;
-      border-bottom: 2px solid #e2e8f0;
+      color: #ff7a00;
+      border-bottom: 2px solid #ffe5c2;
       padding-bottom: 0.5rem;
     }
 
@@ -79,29 +85,60 @@
       width: 160px;
       border-radius: 100px;
       display: block;
-      margin: 0 auto 1rem;
+      margin: 0 auto 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-title {
+      font-weight: 600;
+      color: #1a1a1a;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #64748b;
-    }
-
-    .project-title {
-      font-weight: 600;
-      color: #0f172a;
+      color: #888;
     }
 
     a {
-      color: #0ea5e9;
+      color: #ff7a00;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .contact-icons div {
+      text-align: center;
+      color: #1a1a1a;
+    }
+
+    .btn-orange {
+      background: linear-gradient(to right, #FFA500, #FF7F50);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-orange:hover {
+      background: linear-gradient(to right, #ff7a00, #ff5100);
     }
 
     .spacer {
@@ -125,8 +162,8 @@
   <div class="spacer"></div>
 
   <section id="about">
-    <img src="profile.jpg" alt="Sujithkumar Menon" class="profile" />
-    <h1>Hi, I'm Sujithkumar Menon</h1>
+    <img src="2.png" alt="Sujithkumar Menon" class="profile" />
+    <h1 class="center">Hi, I'm Sujithkumar Menon</h1>
     <p>
       A Business Intelligence and Generative AI specialist with 13+ years of experience turning raw data into actionable insights.
       I build smart dashboards, automate analytics with AI, and design data products that deliver business impact.
@@ -189,18 +226,34 @@
     <ul>
       <li><strong>Purdue University</strong> (2025)<br>Applied Generative AI</li>
       <li><strong>Product School</strong> (2024)<br>Product Management</li>
-      <li><strong>Bachelor of Engineering in Information Technology</strong><br>Pimpri Chinchwad College of Engineering</li>
+      <li><strong>B.E. in IT</strong><br>Pimpri Chinchwad College of Engineering</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:sujithkumar.v.menon@gmail.com">sujithkumar.v.menon@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/sujithkumar-menon" target="_blank">linkedin.com/in/sujithkumar-menon</a></li>
-      <li>GitHub: <a href="https://github.com/smenon2710" target="_blank">github.com/smenon2710</a></li>
-      <li>Location: New York City Metropolitan Area</li>
-    </ul>
+    <h2 class="center">03. What's Next?</h2>
+    <h1 class="center">Get In Touch</h1>
+    <p class="center">
+      I'm currently looking for new opportunities in BI + GenAI, Data Analytics, or AI-Enhanced Product spaces.
+      Whether you have a question or just want to say hi, I'll do my best to get back to you!
+    </p>
+    <div class="center" style="margin-top: 1.5rem;">
+      <a href="mailto:sujithkumar.v.menon@gmail.com" class="btn-orange">Say Hello</a>
+    </div>
+    <div class="contact-icons">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" width="40" />
+        <p>Email</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" width="40" />
+        <p>LinkedIn</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" width="40" />
+        <p>GitHub</p>
+      </div>
+    </div>
   </section>
 
   <footer>
