@@ -16,7 +16,9 @@
       --muted: #888;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--background);
@@ -55,6 +57,7 @@
       background: var(--card);
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      scroll-margin-top: 100px;
     }
 
     h1, h2, h3 {
@@ -147,16 +150,69 @@
   <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Connect With Me</a>
 </section>
 
-<!-- Other sections (About, Experience, Skills, etc.) remain unchanged -->
+<!-- Add scroll-margin-top to each section -->
+<section id="about" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">👤 About Me</div>
+  <p>I’m a <strong>BI & Data Leader</strong> with over 13 years of experience delivering analytics, dashboards, and automation for Fortune 500 companies like Amazon, Discover, and Global Payments.</p>
+  <p>Lately, I’ve focused on merging <strong>Business Intelligence with Generative AI</strong> — developing powerful tools like <strong>SQL Assistants</strong>, <strong>Job Matchers</strong>, and <strong>RAG-based Chatbots</strong> to bring AI into practical business workflows.</p>
+</section>
+
+<section id="experience" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">💼 Experience</div>
+  <h3>Self-Employed</h3>
+  <p><strong>Lead Data Analyst | GenAI Engineer | BI Consultant</strong><br><em>Jul 2024 – Present · NYC Metro Area</em></p>
+  <ul>
+    <li>Built InsightMate, AutoBI+, ImmigraBot, and H1B Matcher</li>
+    <li>Delivered dashboards, improving usability by 30–40%</li>
+  </ul>
+  <h3>Discover Financial Services</h3>
+  <ul><li>Power BI + Python automation, 60% reduction in manual effort</li></ul>
+</section>
+
+<section id="skills" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">🛠️ Skills & Tools</div>
+  <ul>
+    <li><strong>BI:</strong> Tableau, Power BI, SQL, Looker</li>
+    <li><strong>GenAI:</strong> LangChain, Streamlit, OpenAI, HuggingFace</li>
+    <li><strong>Programming:</strong> Python, Git, AWS, GCP</li>
+    <li><strong>Agile & Product:</strong> Jira, Scrum, Client Delivery</li>
+  </ul>
+</section>
+
+<section id="projects" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">📂 Projects</div>
+  <ul>
+    <li><strong>🧠 InsightMate:</strong> GPT SQL Assistant</li>
+    <li><strong>💼 Resume Matcher:</strong> NLP Job Matching</li>
+    <li><strong>🗽 ImmigraBot:</strong> RAG Chatbot</li>
+    <li><strong>📊 AutoBI+:</strong> No-code AI Insights</li>
+  </ul>
+</section>
+
+<section id="education" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">🎓 Education</div>
+  <ul>
+    <li>Purdue University – Applied GenAI (2025)</li>
+    <li>Product School – PM Certificate (2024)</li>
+    <li>PCCOE – B.E. IT</li>
+  </ul>
+</section>
+
+<section id="contact" data-aos="fade-up" style="scroll-margin-top: 100px;">
+  <div class="section-title">🌐 Contact</div>
+  <p>📍 NYC Metropolitan Area</p>
+  <p>📧 <a href="mailto:sujithkumar.v.menon@gmail.com">sujithkumar.v.menon@gmail.com</a></p>
+  <p>🔗 <a href="https://linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a> | <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
+</section>
 
 <footer>
   &copy; 2025 Sujithkumar Menon — BI & GenAI Portfolio
 </footer>
 
-<!-- 💬 Floating Chat Button with Label -->
+<!-- Floating Chat Button with Label -->
 <a href="https://huggingface.co/spaces/smenon2710/sujith-chatbot" target="_blank"
    style="position: fixed; bottom: 20px; right: 20px; text-decoration: none; z-index: 10001; display: flex; flex-direction: column; align-items: center;">
-  <span style="background: #4b0082; color: white; font-weight: bold; padding: 6px 12px; border-radius: 6px 6px 0 0; font-size: 14px;">
+  <span style="pointer-events: none; background: #4b0082; color: white; font-weight: bold; padding: 6px 12px; border-radius: 6px 6px 0 0; font-size: 14px;">
     Chat with my AI Agent
   </span>
   <div style="background: #4b0082; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
