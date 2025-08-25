@@ -4,123 +4,556 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sujithkumar Menon | Analytics Product Manager Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --primary: #FFA500;
-      --gradient: linear-gradient(to right, #FFA500, #FF4500);
-      --background: #121212;
-      --card: #1e1e1e;
-      --text: #f0f0f0;
-      --muted: #888;
+      --primary-light: #FFB84D;
+      --primary-dark: #E6940A;
+      --secondary: #FF4500;
+      --gradient: linear-gradient(135deg, #FFA500, #FF4500);
+      --gradient-hover: linear-gradient(135deg, #FFB84D, #FF6B33);
+      --background: #0A0A0A;
+      --background-light: #121212;
+      --card: #1A1A1A;
+      --card-hover: #222222;
+      --text: #FFFFFF;
+      --text-secondary: #B0B0B0;
+      --muted: #888888;
+      --border: #333333;
+      --success: #00C851;
+      --info: #33B5E5;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    html { 
+      scroll-behavior: smooth; 
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
       background: var(--background);
       color: var(--text);
       line-height: 1.7;
+      overflow-x: hidden;
     }
+
+    /* Enhanced Header */
     header {
-      background: var(--background);
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
       padding: 1rem 2rem;
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
       z-index: 1000;
+      transition: all 0.3s ease;
     }
+    
     nav {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 2.5rem;
     }
+    
     nav a {
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
     }
-    nav a:hover { color: var(--primary); }
+    
+    nav a:hover { 
+      color: var(--primary);
+      background: rgba(255, 165, 0, 0.1);
+      transform: translateY(-2px);
+    }
 
     .spacer { margin-top: 6rem; }
 
+    /* Enhanced Sections */
     section {
-      max-width: 960px;
-      margin: 6rem auto 2rem;
-      padding: 2rem;
+      max-width: 1000px;
+      margin: 4rem auto 2rem;
+      padding: 3rem;
       background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       scroll-margin-top: 100px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+    }
+
+    /* Typography */
     h1, h2, h3 {
       font-weight: 700;
       margin-bottom: 1rem;
     }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 2rem; color: var(--primary); }
-    h3 { font-size: 1.3rem; }
+    h1 { 
+      font-size: 2.8rem; 
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h2 { 
+      font-size: 2.2rem; 
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+    h3 { 
+      font-size: 1.4rem;
+      color: var(--text);
+    }
 
     p, li {
       font-size: 1.1rem;
       margin-bottom: 0.8rem;
+      color: var(--text-secondary);
     }
+    
     ul {
       padding-left: 1.5rem;
       margin-top: 1rem;
     }
 
+    /* Enhanced CTA Button */
     .cta {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       background: var(--gradient);
       color: white;
-      padding: 0.8rem 2rem;
+      padding: 1rem 2rem;
       font-weight: 600;
-      border-radius: 8px;
+      border-radius: 12px;
       text-decoration: none;
       margin-top: 1.5rem;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+      font-size: 1rem;
     }
 
-    .cta:hover { opacity: 0.85; }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .cta:hover { 
+      background: var(--gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
     }
 
+    /* Profile Section */
     .profile {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid var(--primary);
       display: block;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+    }
+
+    .profile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(255, 165, 0, 0.4);
     }
 
     .section-title {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Stats Counter */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--background-light);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      background: var(--background-light);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 25px rgba(255, 165, 0, 0.2);
+    }
+
+    .skill-category h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--card-hover);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary);
+      color: var(--background);
+      transform: scale(1.05);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--background-light);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(255, 165, 0, 0.2);
+      border-color: var(--primary);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .project-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255, 165, 0, 0.1), rgba(255, 69, 0, 0.1));
+    }
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tag {
+      background: var(--primary);
+      color: var(--background);
+      padding: 0.3rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--card);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .project-link:hover {
+      background: var(--primary);
+      color: var(--background);
+      transform: translateY(-2px);
+    }
+
+    /* Experience Timeline */
+    .experience-timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .experience-item {
+      background: var(--background-light);
+      padding: 2rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .experience-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 25px rgba(255, 165, 0, 0.1);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .experience-title {
+      flex: 1;
+    }
+
+    .experience-company {
+      font-size: 1.4rem;
+      font-weight: 700;
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
+    .experience-role {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-date {
+      background: var(--card);
+      color: var(--text-secondary);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+    }
+
+    .experience-achievements {
+      list-style: none;
+      padding: 0;
+    }
+
+    .experience-achievements li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      color: var(--text-secondary);
+    }
+
+    .experience-achievements li::before {
+      content: '▸';
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Enhanced Links */
     a {
       color: var(--primary);
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      background: var(--background-light);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      section {
+        margin: 2rem 1rem;
+        padding: 2rem;
+      }
+      
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      
+      .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
     }
   </style>
 </head>
@@ -128,13 +561,13 @@
 
 <header>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#projects"><i class="fas fa-rocket"></i> Projects</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
   </nav>
 </header>
 
@@ -142,15 +575,37 @@
 
 <section id="home" data-aos="fade-up">
   <img src="profile.jpg" alt="Sujithkumar Menon" class="profile" />
-  <div class="section-title">🏠 Home</div>
+  <div class="section-title"><i class="fas fa-home"></i> Home</div>
   <h1>Analytics Product Manager | BI, GenAI & Data Platforms</h1>
   <p>I am an Analytics and Business Intelligence leader with 14+ years of experience delivering enterprise-scale data products and self-service BI platforms for Fortune 500 companies. I specialize in leading the full product lifecycle to drive adoption, efficiency, and measurable business outcomes.</p>
-  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">Connect With Me</a>
+  <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">
+    <i class="fas fa-envelope"></i> Connect With Me
+  </a>
 </section>
 
 <section id="about" data-aos="fade-up" style="scroll-margin-top: 100px;">
-    <div class="section-title">👤 About Me</div>
+    <div class="section-title"><i class="fas fa-user-circle"></i> About Me</div>
     <p>I have a proven track record of delivering enterprise-scale data products, self-service BI platforms, and actionable insights for companies in the financial services, payments, and consumer technology sectors. My expertise includes integrating GenAI into analytics workflows, including LLM integration, LangChain, RAG, and NLP to automate insights and enhance decision-making.</p>
+    
+    <div class="stats-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-item">
+        <span class="stat-number" data-count="14">0</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="35">0</span>
+        <span class="stat-label">% User Adoption ↑</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="60">0</span>
+        <span class="stat-label">% Efficiency Gain</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="100">0</span>
+        <span class="stat-label">% On-time Delivery</span>
+      </div>
+    </div>
+
     <h3>Career Highlights</h3>
     <ul>
         <li><strong>Delivered 0→1 AI and BI Products:</strong> Led the full product lifecycle for multiple AI-driven and BI solutions, from vision and roadmap to go-to-market. Successfully launched a GenAI SQL Assistant and a GPT-powered Restaurant Chat Assistant.</li>
@@ -159,61 +614,341 @@
     </ul>
 </section>
 
-<section id="experience" data-aos="fade-up" style="scroll-margin-top: 100px;">
-  <div class="section-title">💼 Experience</div>
-    <h3>Self Employed & Personal Projects <em>(Jul 2024 – Present)</em></h3>
-    <p><strong>Product Management</strong></p>
-    <h3>Discover Financial Services <em>(Jan 2023 – Jun 2024)</em></h3>
-    <p><strong>Product Manager | Lead BI Engineer</strong></p>
-    <h3>Global Payments Inc. <em>(Mar 2022 – Dec 2022)</em></h3>
-    <p><strong>Product Owner | Lead Data Analyst | Scrum Master</strong></p>
-    <h3>Amazon Ring <em>(Jun 2019 – Feb 2022)</em></h3>
-    <p><strong>BI Engineer | Project Lead</strong></p>
-    <h3>BitWise (Consulting) <em>(Jun 2016 – May 2019)</em></h3>
-    <p><strong>Product Owner | Senior Tableau Developer</strong></p>
-    <h3>BitWise (Consulting) <em>(Jun 2011 – May 2016)</em></h3>
-    <p><strong>Senior Data Analyst</strong></p>
+<section id="experience" data-aos="fade-up">
+  <div class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</div>
+  
+  <div class="experience-timeline">
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="100">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">Self Employed & Personal Projects</div>
+          <div class="experience-role">Product Manager & AI Developer</div>
+        </div>
+        <div class="experience-date">Jul 2024 – Present</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Lead the full product lifecycle for multiple AI-driven products from vision, roadmap, and MVP definition to GTM execution</li>
+        <li>Conduct market research, user testing, and competitive analysis to validate demand, refine features, and drive user adoption, engagement, retention, and ROI</li>
+        <li>Delivered an AI-powered SQL assistant with Streamlit and SQLite, integrating LLMs for natural language–to–SQL translation</li>
+        <li>Built and deployed a GPT-powered chatbot on Vercel to centralize restaurant discovery, comparison, and order recommendations</li>
+      </ul>
+    </div>
+
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="200">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">Discover Financial Services</div>
+          <div class="experience-role">Product Manager | Lead BI Engineer</div>
+        </div>
+        <div class="experience-date">Jan 2023 – Jun 2024</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Defined and executed BI ecosystem product vision, strategy, and goals, ensuring alignment with enterprise data and analytics strategies</li>
+        <li>Directed four cross-functional teams to deliver 100% of product iterations on time, removing impediments and ensuring KPI alignment across all initiatives</li>
+        <li>Architected and optimized executive-facing Tableau dashboards and underlying SQL queries, improving performance, usability, and adoption</li>
+        <li>Delivered real-time data-driven insights that increased leadership decision-making speed by 20%</li>
+        <li>Automated reporting workflows using Python, SQL, and ETL processes, reducing manual processing time by 60% and improving data accuracy</li>
+      </ul>
+    </div>
+
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="300">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">Global Payments Inc.</div>
+          <div class="experience-role">Product Owner | Lead Data Analyst | Scrum Master</div>
+        </div>
+        <div class="experience-date">Mar 2022 – Dec 2022</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Defined and executed product strategy for multiple data analytics products, aligning roadmaps with business objectives, KPIs, and user feedback</li>
+        <li>Led cross-functional teams to improve inefficient, reactive BI workflows by implementing Agile delivery models</li>
+        <li>Reduced ad-hoc BI requests by 40% through improved self-service adoption</li>
+        <li>Delivered data-rich dashboards in Tableau and Power BI that aligned product metrics with strategic objectives</li>
+        <li>Introduced standardized incident management workflows and centralized ticketing system, increasing operational efficiency by 25%</li>
+      </ul>
+    </div>
+
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="400">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">Amazon Ring</div>
+          <div class="experience-role">BI Engineer | Project Lead</div>
+        </div>
+        <div class="experience-date">Jun 2019 – Feb 2022</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Led end-to-end delivery of BI and analytics products, serving as primary liaison between business teams, product owners, and technical resources</li>
+        <li>Consolidated 100+ fragmented Looker dashboards into 25+ optimized Tableau products, applying parameters, calculated sets, and data blending</li>
+        <li>Reduced dashboard duplication by 35% and increased user adoption through standardized metrics and improved usability</li>
+        <li>Replaced slow, manual reporting processes with automated ETL workflows and standardized data mappings</li>
+        <li>Applied advanced visualization and analytics techniques to boost retention by 17%, delivering interactive dashboards that improved data storytelling</li>
+        <li>Increased cross-functional delivery velocity by 30% by mentoring analysts, introducing agile delivery models, and facilitating stakeholder alignment</li>
+      </ul>
+    </div>
+
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="500">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">BitWise (Consulting)</div>
+          <div class="experience-role">Product Owner | Senior Tableau Developer</div>
+        </div>
+        <div class="experience-date">Jun 2016 – May 2019</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Defined product vision and roadmap for clinical trial analytics, gathering requirements from global stakeholders across 10+ departments</li>
+        <li>Partnered with cross-functional teams to design and deliver two executive portals (GMALT & MSSLT) covering 10 subject areas</li>
+        <li>Developed and launched interactive Tableau dashboards that provided KPI-driven insights, improving visibility for global teams by 30%</li>
+        <li>Increased process efficiency by 25% by streamlining fragmented reporting and delivering tailored analytics solutions</li>
+      </ul>
+    </div>
+
+    <div class="experience-item" data-aos="fade-right" data-aos-delay="600">
+      <div class="experience-header">
+        <div class="experience-title">
+          <div class="experience-company">BitWise (Consulting)</div>
+          <div class="experience-role">Senior Data Analyst</div>
+        </div>
+        <div class="experience-date">Jun 2011 – May 2016</div>
+      </div>
+      <ul class="experience-achievements">
+        <li>Designed and deployed Power BI proof-of-concepts that supported enterprise contract wins, securing $50K in new consulting revenue</li>
+        <li>Led the migration of 40+ WebFocus dashboards to Tableau, improving performance, scalability, and adoption rates</li>
+        <li>Reduced reporting effort by 60% through automation that eliminated manual processes</li>
+        <li>Architected and implemented a Hadoop-based data warehouse integrated with Tableau Server</li>
+        <li>Improved data refresh performance by 40% and dashboard retention by 17% through parameter-driven, interactive dashboard design</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section id="skills" data-aos="fade-up" style="scroll-margin-top: 100px;">
-  <div class="section-title">🛠️ Skills & Tools</div>
-  <ul>
-    <li><strong>Product Management:</strong> Product Strategy, Go-To-Market, Agile Project Leadership, Stakeholder Management.</li>
-    <li><strong>Business Intelligence:</strong> Tableau, Power BI, SQL, Data Storytelling, Dashboard Development, Self-Service Analytics Enablement.</li>
-    <li><strong>Generative AI:</strong> GenAI Integration, LangChain, RAG, Streamlit, OpenAI API, LLM Integration.</li>
-    <li><strong>Data Platforms & Tools:</strong> Snowflake, Redshift, Python, AWS, Azure, GCP, Hadoop.</li>
-  </ul>
+<section id="skills" data-aos="fade-up">
+  <div class="section-title"><i class="fas fa-cogs"></i> Skills & Expertise</div>
+  
+  <div class="skills-grid">
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+      <h3><i class="fas fa-chart-line"></i> Product Management</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Product Strategy</span>
+        <span class="skill-tag">Go-To-Market</span>
+        <span class="skill-tag">Agile Leadership</span>
+        <span class="skill-tag">Stakeholder Management</span>
+        <span class="skill-tag">Roadmapping</span>
+        <span class="skill-tag">KPI Development</span>
+        <span class="skill-tag">Cross-Functional Teams</span>
+        <span class="skill-tag">Strategic Planning</span>
+      </div>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+      <h3><i class="fas fa-chart-bar"></i> Business Intelligence & Analytics</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Data Storytelling</span>
+        <span class="skill-tag">Dashboard Development</span>
+        <span class="skill-tag">Self-Service Analytics</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">Performance Tracking</span>
+      </div>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+      <h3><i class="fas fa-robot"></i> Generative AI & Machine Learning</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">GenAI Integration</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">OpenAI API</span>
+        <span class="skill-tag">Anthropic API</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">Hugging Face</span>
+        <span class="skill-tag">LLM Integration</span>
+      </div>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="400">
+      <h3><i class="fas fa-cloud"></i> Data Platforms & Tools</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Snowflake</span>
+        <span class="skill-tag">Redshift</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">GCP</span>
+        <span class="skill-tag">Hadoop</span>
+        <span class="skill-tag">ETL Processes</span>
+        <span class="skill-tag">Data Governance</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="projects" data-aos="fade-up" style="scroll-margin-top: 100px;">
-  <div class="section-title">📂 Projects</div>
-  <ul>
-    <li><strong>Restobot – AI Restaurant Assistant:</strong> An AI chatbot that delivers real-time restaurant recommendations. See the <a href="Live Demo of Restobot">Live Demo</a> and <a href="GitHub to documentation">GitHub</a>.</li>
-    <li><strong>GenAI SQL Assistant:</strong> A self-service GenAI analytics assistant that empowers non-technical users to query structured data using natural language. See the <a href="Live Demo">Live Demo</a> and <a href="GitHub">GitHub</a>.</li>
-    <li><strong>InsightMate - AI-Powered Data Exploration:</strong> A GenAI assistant that lets users analyze uploaded datasets via plain English queries. See the <a href="Live Demo">Live Demo</a>.</li>
-    <li><strong>AI Stock Analyzer:</strong> An AI financial insights tool offering sector-based stock discovery and GPT-generated recommendations. See the <a href="Live Demo">Live Demo</a> and <a href="GitHub">GitHub</a>.</li>
-  </ul>
+<section id="projects" data-aos="fade-up">
+  <div class="section-title"><i class="fas fa-rocket"></i> Featured Projects</div>
+  
+  <div class="projects-grid">
+    <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxBSSUyMGRhdGElMjBhbmFseXRpY3N8ZW58MHx8fHwxNzU2MTMwNjQ5fDA&ixlib=rb-4.1.0&q=85');"></div>
+      <div class="project-content">
+        <h3 class="project-title">Restobot – AI Restaurant Assistant</h3>
+        <p class="project-description">End-to-end product management of an AI chatbot that delivers real-time restaurant recommendations. Created product vision, roadmap, competitive analysis, user personas, and PRD with sample user stories and success metrics.</p>
+        <div class="project-tech">
+          <span class="tech-tag">GPT-3.5</span>
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">SerpAPI</span>
+          <span class="tech-tag">Vercel</span>
+          <span class="tech-tag">Product Management</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1612278247414-b5df9638e1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw0fHxBSSUyMGRhdGElMjBhbmFseXRpY3N8ZW58MHx8fHwxNzU2MTMwNjQ5fDA&ixlib=rb-4.1.0&q=85');"></div>
+      <div class="project-content">
+        <h3 class="project-title">GenAI SQL Assistant</h3>
+        <p class="project-description">Built a self-service GenAI analytics assistant empowering non-technical users to query structured data using natural language. Integrated OpenAI with Streamlit to translate questions into SQL and visualized insights in real-time.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/8090128/pexels-photo-8090128.jpeg');"></div>
+      <div class="project-content">
+        <h3 class="project-title">InsightMate: AI-Powered Data Exploration</h3>
+        <p class="project-description">Developed InsightMate, a GenAI assistant that lets users analyze uploaded datasets via plain English queries—no SQL or coding required. Converted queries to DuckDB SQL using GPT-4 and surfaced insights with interactive charts.</p>
+        <div class="project-tech">
+          <span class="tech-tag">GPT-4</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">DuckDB</span>
+          <span class="tech-tag">Plotly</span>
+          <span class="tech-tag">Pandas</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+      <div class="project-image" style="background-image: url('https://images.pexels.com/photos/17483869/pexels-photo-17483869.jpeg');"></div>
+      <div class="project-content">
+        <h3 class="project-title">AI Stock Analyzer</h3>
+        <p class="project-description">Created an AI financial insights tool offering sector-based stock discovery, GPT-generated recommendations, and trend visualizations. Integrated real-time market data, sentiment analysis, and interactive dashboards to help users make informed investment decisions.</p>
+        <div class="project-tech">
+          <span class="tech-tag">GPT-4</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">yFinance</span>
+          <span class="tech-tag">Plotly</span>
+          <span class="tech-tag">Feedparser</span>
+          <span class="tech-tag">Sentiment Analysis</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="education" data-aos="fade-up" style="scroll-margin-top: 100px;">
-  <div class="section-title">🎓 Education</div>
-  <ul>
-    <li>Purdue University – Bootcamp, Applied Generative AI</li>
-    <li>Product School – Product Manager Certified</li>
-    <li>Pimpri Chinchwad College of Engineering – B.E., Information Technology</li>
-    <li>Tableau Certified Data Analyst</li>
-  </ul>
+<section id="education" data-aos="fade-up">
+  <div class="section-title"><i class="fas fa-graduation-cap"></i> Education & Certifications</div>
+  
+  <div class="skills-grid">
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+      <h3><i class="fas fa-university"></i> Formal Education</h3>
+      <div class="project-description">
+        <strong>B.E., Information Technology</strong><br>
+        Pimpri Chinchwad College of Engineering<br>
+        <em>Foundation in software engineering, data structures, and system design</em>
+      </div>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+      <h3><i class="fas fa-certificate"></i> Professional Certifications</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Tableau Certified Data Analyst</span>
+        <span class="skill-tag">Product Manager Certified - Product School</span>
+        <span class="skill-tag">Collibra Data Governance</span>
+      </div>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+      <h3><i class="fas fa-brain"></i> Specialized Training</h3>
+      <div class="project-description">
+        <strong>Applied Generative AI Bootcamp</strong><br>
+        Purdue University<br>
+        <em>Advanced training in LLMs, RAG, LangChain, and enterprise AI implementation</em>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" data-aos="fade-up" style="scroll-margin-top: 100px;">
-  <div class="section-title">🌐 Contact</div>
-  <p>📍 Franklin Park, NJ</p>
-  <p>📧 <a href="mailto:sujithkumar.v.menon@gmail.com">sujithkumar.v.menon@gmail.com</a></p>
-  <p>🔗 <a href="https://linkedin.com/in/sujithkumar-menon" target="_blank">LinkedIn</a> | <a href="https://github.com/smenon2710" target="_blank">GitHub</a></p>
+<section id="contact" data-aos="fade-up">
+  <div class="section-title"><i class="fas fa-envelope"></i> Let's Connect</div>
+  
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+      Ready to discuss how I can help drive your analytics and AI initiatives? Let's connect!
+    </p>
+  </div>
+
+  <div class="skills-grid" style="max-width: 600px; margin: 0 auto;">
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="100" style="text-align: center;">
+      <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+      <p style="color: var(--text-secondary); font-size: 1.1rem;">Franklin Park, NJ</p>
+      <p style="color: var(--muted); font-size: 0.9rem;">Cap-exempt H1B visa holder<br>Available for immediate sponsorship transfer</p>
+    </div>
+
+    <div class="skill-category" data-aos="zoom-in" data-aos-delay="200" style="text-align: center;">
+      <h3><i class="fas fa-envelope"></i> Get In Touch</h3>
+      <p style="margin-bottom: 1rem;">
+        <a href="mailto:sujithkumar.v.menon@gmail.com" style="color: var(--primary); font-size: 1.1rem;">
+          <i class="fas fa-envelope"></i> sujithkumar.v.menon@gmail.com
+        </a>
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem;">
+        <a href="https://linkedin.com/in/sujithkumar-menon" target="_blank" class="project-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/smenon2710" target="_blank" class="project-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="mailto:sujithkumar.v.menon@gmail.com" class="cta">
+      <i class="fas fa-paper-plane"></i> Start a Conversation
+    </a>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Sujithkumar Menon — Analytics Product Manager Portfolio
+  <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+    <i class="fas fa-code" style="color: var(--primary);"></i>
+    <span>Built with passion for data-driven excellence</span>
+    <i class="fas fa-chart-line" style="color: var(--primary);"></i>
+  </div>
+  <p>&copy; 2025 Sujithkumar Menon — Analytics Product Manager Portfolio</p>
+  <p style="margin-top: 0.5rem; font-size: 0.8rem;">Transforming data into actionable insights • Driving innovation through AI</p>
 </footer>
 
 <div id="chat-iframe-wrapper"
@@ -242,6 +977,46 @@
 
   toggleBtn.addEventListener('click', () => {
     iframeWrapper.style.display = iframeWrapper.style.display === 'none' ? 'block' : 'none';
+  });
+
+  // Stats counter animation
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-count'));
+      const duration = 2000; // 2 seconds
+      const increment = target / (duration / 16); // 60fps
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(current);
+        }
+      }, 16);
+    });
+  }
+
+  // Trigger animation when stats section comes into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  // Start observing when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+      observer.observe(statsContainer);
+    }
   });
 </script>
 </body>
